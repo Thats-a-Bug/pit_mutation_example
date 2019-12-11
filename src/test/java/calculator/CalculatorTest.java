@@ -22,12 +22,12 @@ public class CalculatorTest {
     @Test
     public void testConditionalSetTrue() {
         Calculator calculator = new Calculator();
-        Assert.assertTrue(calculator.setConditional(2, true));
+        Assert.assertTrue(calculator.tryToSetDisplay(2, true));
     }
 
     @Test
     public void testConditionalSetFalse() {
         Calculator calculator = new Calculator();
-        Assert.assertFalse(calculator.setConditional(3, false));
+        Assert.assertFalse(calculator.tryToSetDisplay(3, false));
     }
 }

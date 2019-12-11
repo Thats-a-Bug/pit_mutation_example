@@ -6,7 +6,7 @@ public class Calculator {
 
     public Calculator() {
         this.valueDisplayed = 0;
-    }
+}
 
     public Calculator(int initialValue) {
         this.valueDisplayed = initialValue;
@@ -28,16 +28,19 @@ public class Calculator {
         return this.valueDisplayed;
     }
 
-    public void set(int x) {
-        this.valueDisplayed = x;
-    }
-
-    public boolean setConditional(int x, boolean yesOrNo) {
-        if(yesOrNo) {
-            set(x);
+    public boolean tryToSetDisplay(int x, boolean canChangeDisplay) {
+        if(canChangeDisplay) {
+            setDisplay(x);
             return true;
         } else {
             return false;
         }
     }
+
+
+    private void setDisplay(int x)
+    {
+        this.valueDisplayed = x;
+    }
+
 }
