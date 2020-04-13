@@ -13,6 +13,13 @@ class CalculatorTest {
     }
 
     @Test
+    fun testSubtraction() {
+        val calculator = Calculator(5.0)
+        calculator.subtract(2.0)
+        assertThat(calculator.getResult()).isEqualTo(3.0)
+    }
+
+    @Test
     fun testPower() {
         val calculator = Calculator(displayedValue = 2.0)
         calculator.power(3.0)
